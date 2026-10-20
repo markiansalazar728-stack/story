@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9e5ef">
+  <title>Read a Story | Storyverse</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="reader">
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Storyverse home">Storyverse<span>☾</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#library">Library</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode">☾</button>
+  </header>
+
+  <main class="reader-main">
+    <a class="back-link" href="index.html#library">← Back to library</a>
+    <div id="readerError" class="reader-error" hidden></div>
+    <div id="readerView" hidden>
+      <img id="storyCover" class="reader-cover" alt="">
+      <header class="reader-heading">
+        <p id="storyGenre" class="eyebrow"></p>
+        <h1 id="storyTitle"></h1>
+        <p id="storyAuthor" class="story-author"></p>
+        <div class="reader-tools">
+          <button id="toggleSynopsis" class="button button-soft" type="button" aria-expanded="true">Hide synopsis</button>
+          <button id="likeButton" class="button button-soft" type="button" aria-pressed="false">♡ Save</button>
+          <button id="fontSizeButton" class="button button-soft" type="button" aria-label="Increase reading text size">A+</button>
+        </div>
+        <p id="storySynopsis" class="reader-synopsis"></p>
+        <div class="progress-track" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="progressBar"></div>
+        </div>
+        <p id="progressLabel" class="progress-label">0% read</p>
+      </header>
+      <figure class="reader-illustration">
+        <img id="storyIllustration" class="chapter-image" alt="">
+        <figcaption id="illustrationCaption"></figcaption>
+      </figure>
+      <article id="storyContent" class="chapter-body"></article>
+      <nav class="reader-navigation" aria-label="Story navigation">
+        <a id="prevStoryButton" class="button button-soft" href="#">← Previous story</a>
+        <a id="nextStoryButton" class="button button-primary" href="#">Next story →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">Storyverse<span>☾</span></a>
+    <p>Thank you for reading.</p>
+    <a class="text-link" href="index.html#library">Choose another story →</a>
+  </footer>
+</body>
+</html>
